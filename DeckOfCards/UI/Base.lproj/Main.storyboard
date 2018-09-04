@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Card View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="CardViewController" customModule="DeckOfCards" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="center" spacing="11" translatesAutoresizingMaskIntoConstraints="NO" id="K9b-Rh-htV">
+                                <rect key="frame" x="56.5" y="66.5" width="262.5" height="534"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dw2-h8-DfE">
+                                        <rect key="frame" x="111.5" y="0.0" width="39.5" height="19.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eon-if-bZ6">
+                                        <rect key="frame" x="110.5" y="30.5" width="42" height="23.5"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="23.5" id="dDU-Uz-Yjx"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="m1F-O2-aDQ">
+                                        <rect key="frame" x="0.0" y="65" width="262.5" height="469"/>
+                                    </imageView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="m1F-O2-aDQ" firstAttribute="width" secondItem="K9b-Rh-htV" secondAttribute="width" id="NL3-ha-cDo"/>
+                                </constraints>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HkB-eJ-D4d">
+                                <rect key="frame" x="74.5" y="617" width="225" height="40"/>
+                                <color key="backgroundColor" red="0.74144262075424194" green="0.30824434924571453" blue="0.30760351031709798" alpha="0.99348041369999995" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                <state key="normal" title="Draw"/>
+                                <connections>
+                                    <action selector="drawButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="QvK-v4-n6b"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="HkB-eJ-D4d" firstAttribute="top" secondItem="m1F-O2-aDQ" secondAttribute="bottom" constant="16.5" id="6LX-Cs-m33"/>
+                            <constraint firstItem="HkB-eJ-D4d" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="ArI-AD-Oa4"/>
+                            <constraint firstItem="HkB-eJ-D4d" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.6" id="Daf-uo-cdu"/>
+                            <constraint firstItem="K9b-Rh-htV" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.8" id="Viy-eA-2vD"/>
+                            <constraint firstItem="K9b-Rh-htV" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.7" id="dhz-Cf-uTU"/>
+                            <constraint firstItem="K9b-Rh-htV" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="ooH-sK-pG0"/>
+                            <constraint firstItem="K9b-Rh-htV" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="oq5-hU-iM7"/>
+                            <constraint firstItem="K9b-Rh-htV" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="zuT-yq-V5f"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="cardImageView" destination="m1F-O2-aDQ" id="9t8-ib-fYO"/>
+                        <outlet property="suitLabel" destination="Dw2-h8-DfE" id="hi3-cv-yiM"/>
+                        <outlet property="valueLabel" destination="eon-if-bZ6" id="8Yn-fa-cCd"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="133.5832083958021"/>
+        </scene>
+    </scenes>
+</document>
